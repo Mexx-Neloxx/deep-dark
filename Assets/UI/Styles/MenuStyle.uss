@@ -1,0 +1,59 @@
+.menu_btns {
+    -unity-font-definition: url("project://database/Assets/UI/Fonts/Mantinia%20Regular.otf?fileID=12800000&guid=3a5472a2c50ffd24faf4faafd9f35ed0&type=3#Mantinia Regular");
+    -unity-font-style: bold;
+    background-color: rgb(134, 96, 5);
+    border-left-color: rgb(80, 0, 0);
+    border-right-color: rgb(80, 0, 0);
+    border-top-color: rgb(80, 0, 0);
+    border-bottom-color: rgb(80, 0, 0);
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: rgb(182, 162, 0);
+    font-size: 150%;
+    -unity-text-align: middle-center;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-left: 0;
+}
+
+.menu_btns:hover {
+    background-color: rgb(165, 116, 0);
+    color: rgb(255, 223, 0);
+    border-left-color: rgb(147, 16, 0);
+    border-right-color: rgb(147, 16, 0);
+    border-top-color: rgb(147, 16, 0);
+    border-bottom-color: rgb(147, 16, 0);
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.menu_btns:focus {
+    background-color: rgb(203, 143, 0);
+    border-left-color: rgb(255, 180, 0);
+    border-right-color: rgb(255, 180, 0);
+    border-top-color: rgb(255, 180, 0);
+    border-bottom-color: rgb(255, 180, 0);
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    scale: 1.1 1;
+}
