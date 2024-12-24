@@ -1,0 +1,14 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/MenuStyle.uss?fileID=7433441132597879392&amp;guid=efc50d9dafd00794e9149ad37c48ee90&amp;type=3#MenuStyle" />
+    <engine:VisualElement name="VisElem_InGame" style="flex-grow: 1; top: 0; right: 0; left: 0; bottom: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
+        <engine:Label text="HP: " name="Label_HP" style="width: 56px; margin-top: 0; margin-left: 0; margin-right: 0; margin-bottom: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; top: 2%; right: 0; left: 1%; bottom: 92%;" />
+        <engine:ProgressBar value="20" title="HP" name="PB_HP" style="width: 229px; position: absolute; top: 1%; right: 0; left: 7%; bottom: 93%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-color: rgb(0, 255, 17); -unity-background-image-tint-color: rgb(0, 255, 32); -unity-text-outline-color: rgba(40, 255, 0, 0); display: flex; -unity-text-outline-width: 0;" />
+    </engine:VisualElement>
+    <engine:VisualElement name="VisElem_Pause" style="flex-grow: 1; display: none; top: 0; right: 0; bottom: 0; left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+        <engine:Label text="PAUSE" name="Label_Pause" style="-unity-text-align: upper-center; font-size: 28px; -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Mantinia%20Regular.otf?fileID=12800000&amp;guid=3a5472a2c50ffd24faf4faafd9f35ed0&amp;type=3#Mantinia Regular&quot;); color: rgb(215, 191, 0);" />
+        <engine:Button text="CONTINUE" name="Btn_Continue" parse-escape-sequences="false" class="menu_btns" style="padding-right: 0; padding-top: 1%; padding-bottom: 1%; padding-left: 0; margin-bottom: 0; margin-top: 2%;" />
+        <engine:Button text="SAVE GAME" name="Btn_SaveGame" class="menu_btns" style="padding-right: 0; padding-left: 0; padding-bottom: 1%; padding-top: 1%; margin-top: 2%; margin-bottom: 0;" />
+        <engine:Button text="LOAD GAME" name="Btn_LoadGame" class="menu_btns" style="margin-top: 2%; margin-bottom: 0; padding-right: 0; padding-left: 0; padding-top: 1%; padding-bottom: 1%;" />
+        <engine:Button text="MAIN MENU" name="Btn_MainMenu" class="menu_btns" style="margin-top: 2%; margin-bottom: 0; padding-top: 1%; padding-right: 0; padding-bottom: 1%; padding-left: 0;" />
+    </engine:VisualElement>
+</engine:UXML>
