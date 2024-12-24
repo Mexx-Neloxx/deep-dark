@@ -2,19 +2,20 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using static DataManager;
 
 public class MainMenu : MonoBehaviour
 {
     public PlayerInput Input;
     public UIDocument UI;
-    //public DataManager DataManager;
+    public DataManager DataManager;
 
     private VisualElement _root;
 
     void Start()
     {
         _root = UI.rootVisualElement;
-        //Input.SwitchCurrentActionMap("UI");
+        Input.SwitchCurrentActionMap("UI");
 
         //элементы главного меню
         _root.Q<Button>("Btn_StartGame").clicked += MainMenu_StartGame;
@@ -57,15 +58,18 @@ public class MainMenu : MonoBehaviour
     // загрузить игру
     private void MainMenu_LoadGame()
     {
-        
+        GameData.NeedLoadGame = true;
+        Input.SwitchCurrentActionMap("Player");
+        OnDisable();
+        SceneManager.LoadScene("scene");
     }
 
     // начать игру
     private void MainMenu_StartGame()
     {
-        //Input.SwitchCurrentActionMap("Player");
+        Input.SwitchCurrentActionMap("Player");
         OnDisable();
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("scene");
     }
 
     void Update()
