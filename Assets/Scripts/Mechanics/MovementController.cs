@@ -21,7 +21,7 @@ public class MovementController : MonoBehaviour
     public float jumpforce;
     public LayerMask groundLayer;
     public Transform groundCheck;
-    public float groundCheckRadius = 1000;
+    public float groundCheckRadius = 0.01f;
 
     
     private bool _isGrounded;
