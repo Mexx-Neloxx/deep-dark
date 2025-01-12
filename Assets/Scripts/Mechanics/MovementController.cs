@@ -9,7 +9,7 @@ public class MovementController : MonoBehaviour
     public CharacterController CharacterController;
 
     public PlayerInput Input;
-   
+
     public float movespeed;
     private InputAction _move;
 
@@ -23,14 +23,14 @@ public class MovementController : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius = 0.01f;
 
-    
+
     private bool _isGrounded;
     private float _yRotation;
     private Vector3 _velocity;
     public float Gravity;
-    
 
-    
+
+
     void Start()
     {
         _move = Input.actions["Move"];
@@ -45,11 +45,11 @@ public class MovementController : MonoBehaviour
 
 
 
-       
-        
+
+
     }
 
-    
+
     void Update()
     {
         var LookInputX = _look.ReadValue<Vector2>().x * Sensivity * Time.deltaTime;
@@ -57,7 +57,7 @@ public class MovementController : MonoBehaviour
 
         _yRotation += LookInputY;
         _yRotation = Mathf.Clamp(_yRotation, -60, 90);
-        Camera.localRotation = Quaternion.Euler(_yRotation, 0, 0);
+        //Camera.localRotation = Quaternion.Euler(_yRotation, 0f, 0f);
 
         transform.Rotate(0, LookInputX, 0);
 
@@ -93,5 +93,5 @@ public class MovementController : MonoBehaviour
     {
         throw new System.NotImplementedException();
     }
-    
+
 }
