@@ -64,7 +64,7 @@ public class MovementController : MonoBehaviour
         _velocity.y += Gravity * Time.deltaTime;
 
         var MoveInput = _move.ReadValue<Vector2>() * movespeed * Time.deltaTime;
-        var MoveDirection = new Vector3(MoveInput.x, _velocity.y, MoveInput.y);
+        var MoveDirection = new Vector3(MoveInput.x, 0, MoveInput.y);
         MoveDirection = CharacterController.transform.TransformDirection(MoveDirection);
 
         if (CharacterController.isGrounded)
