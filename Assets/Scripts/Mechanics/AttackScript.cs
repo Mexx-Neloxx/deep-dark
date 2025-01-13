@@ -11,7 +11,7 @@ public class AttackScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)) animator.SetBool("Attack", true);
-        else if (Input.GetMouseButtonUp(0)) animator.SetBool("Attack",false);
+        if(Input.GetMouseButtonDown(0)) animator.SetBool("IsAttacking", true);
+        else if (Input.GetMouseButtonUp(0)) animator.SetBool("IsAttacking", false);
     }
 }

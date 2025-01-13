@@ -57,7 +57,7 @@ public class MovementController : MonoBehaviour
 
         _yRotation += LookInputY;
         _yRotation = Mathf.Clamp(_yRotation, -60, 90);
-        //Camera.localRotation = Quaternion.Euler(_yRotation, 0f, 0f);
+        Camera.localRotation = Quaternion.Euler(_yRotation, 0f, 0f);
 
         transform.Rotate(0, LookInputX, 0);
 
