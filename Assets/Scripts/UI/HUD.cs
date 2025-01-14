@@ -14,11 +14,13 @@ public class HUD : MonoBehaviour
     public DataManager DataManager;
 
 
-    private VisualElement _root;
+    private VisualElement _root, _ProgBarHP;
     
     private MovementController _player;
+
+    private EnemyGivenDamageScript _HP;
   
-    private ProgressBar _ProgBarHP;
+    
 
     void Start()
     {
@@ -36,6 +38,7 @@ public class HUD : MonoBehaviour
 
 
         _player = FindAnyObjectByType<MovementController>();
+        _HP = FindAnyObjectByType<EnemyGivenDamageScript>();
 
         _root = UI.rootVisualElement;
         Input.actions["PauseMenu"].performed += HUD_performed; ;
@@ -46,7 +49,8 @@ public class HUD : MonoBehaviour
         _root.Q<Button>("Btn_LoadGame").clicked += HUD_LoadGame;
         _root.Q<Button>("Btn_MainMenu").clicked += HUD_MainMenu;
 
-        _ProgBarHP = _root.Q<ProgressBar>("PB_HP");
+        _ProgBarHP = _root.Q<VisualElement>("VisElem_HPBar");
+        
     }
 
     // в главное меню
@@ -122,7 +126,23 @@ public class HUD : MonoBehaviour
  
     void Update()
     {
-        
+        _root.Q<Label>("Label_HP").text = "HP: " + _HP.HP.ToString();
+        _ProgBarHP.style.width = new StyleLength(Convert.ToInt32(_HP.HP));
+
+        if (_HP.HP <= (100 * 0.3))
+        {
+            _ProgBarHP.style.backgroundColor = new StyleColor(Color.red);
+
+        }
+        else if (_HP.HP <= (100 * 0.6))
+        {
+            _ProgBarHP.style.backgroundColor = new StyleColor(Color.yellow);
+        }
+        else if (_HP.HP > (100 * 0.6))
+        {
+            _ProgBarHP.style.backgroundColor = new StyleColor(Color.green);
+        }
+
     }
 
     private void OnDisable()

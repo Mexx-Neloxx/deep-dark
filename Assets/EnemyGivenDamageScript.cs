@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class EnemyGivenDamageScript : MonoBehaviour
 {
-    private int HP = 100;
+    public int HP = 100;
     public Animator animator;
     public Slider HealthBar;
 
